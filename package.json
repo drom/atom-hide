@@ -25,6 +25,7 @@
     "atom": ">=1.30.0 <2.0.0"
   },
   "dependencies": {
+    "svlint": "^0.2.0",
     "tree-sitter-verilog": "^0.18.3"
   },
   "consumedServices": {
