@@ -1,0 +1,37 @@
+{
+  "name": "ide-eda",
+  "version": "0.1.0",
+  "description": "IDE for EDA",
+  "main": "lib/main.js",
+  "keywords": [
+    "EDA",
+    "verilog",
+    "tree-sitter"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drom/atom-ide-eda.git"
+  },
+  "author": "Aliaksei Chapyzhenka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drom/atom-ide-eda/issues"
+  },
+  "homepage": "https://github.com/drom/atom-ide-eda#readme",
+  "engines": {
+    "atom": ">=1.30.0 <2.0.0"
+  },
+  "dependencies": {
+    "tree-sitter-verilog": "^0.18.3"
+  },
+  "consumedServices": {
+    "linter-indie": {
+      "versions": {
+        "2.0.0": "consumeIndie"
+      }
+    }
+  }
+}
