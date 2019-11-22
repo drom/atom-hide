@@ -1,0 +1,313 @@
+name: 'SystemVerilog'
+scopeName: 'source.systemverilog'
+type: 'tree-sitter'
+parser: 'tree-sitter-verilog'
+
+injectionRegex: 'systemverilog|SystemVerilog'
+
+fileTypes: [
+  'v'
+  'sv'
+  'vh',
+  'svh'
+]
+
+folds: [
+  {
+    type: ['comment']
+  }
+  {
+    type: ['seq_block']
+    start: {index: 0}
+    end: {index: -1}
+  }
+  {
+    type: ['case_item']
+    start: {index: -1}
+    end: {index: -1}
+  }
+  {
+    type: ['hierarchical_instance']
+    start: {index: 1}
+    end: {index: -1}
+  }
+  {
+    type: ['function_body_declaration']
+    start: {index: 0}
+    end: {index: -1}
+  }
+  {
+    type: ['class_constructor_declaration']
+    start: {index: 4}
+    end: {index: -1}
+  }
+  {
+    type: ['class_declaration']
+    start: {index: 2}
+    end: {index: -1}
+  }
+  {
+    type: ['list_of_parameter_assignments']
+    start: {index: 1}
+    end: {index: -1}
+  }
+  {
+    type: ['always_construct', 'case_statement', 'module_declaration']
+    start: {index: 2}
+    end: {index: -1}
+  }
+  {
+    start: {index: 0, type: '{'}
+    end: {index: -1, type: '}'}
+  }
+  {
+    start: {index: 0, type: '['}
+    end: {index: -1, type: ']'}
+  }
+  {
+    start: {index: 0, type: '('}
+    end: {index: -1, type: ')'}
+  }
+]
+
+comments:
+  start: '// '
+
+scopes:
+
+  include_compiler_directive: 'entity.name.type'
+  text_macro_definition: 'entity.name.type'
+  text_macro_usage: 'entity.name.type'
+  id_directive: 'entity.name.type'
+  zero_directive: 'entity.name.type'
+  timescale_compiler_directive: 'entity.name.type'
+  default_nettype_compiler_directive: 'entity.name.type'
+  unconnected_drive: 'entity.name.type'
+  line_compiler_directive: 'entity.name.type'
+  begin_keywords: 'entity.name.type'
+
+  text_macro_identifier: 'entity.name.type'
+
+  include_compiler_directive_relative: 'string'
+  include_compiler_directive_standard: 'string'
+  macro_text: 'string'
+  time_literal: 'string'
+  double_quoted_string: 'string'
+
+  translation_unit: 'source.systemverilog'
+  comment: 'comment.block'
+  attribute_instance: 'comment.block'
+
+
+  module_keyword: 'storage.type.module.systemverilog'
+  '"endmodule"': 'storage.type.module.systemverilog'
+
+  '"function"': 'storage.type.module.systemverilog'
+  '"endfunction"': 'storage.type.module.systemverilog'
+
+  '"task"': 'storage.type.module.systemverilog'
+  '"endtask"': 'storage.type.module.systemverilog'
+
+  '"class"': 'storage.type.module.systemverilog'
+  '"endclass"': 'storage.type.module.systemverilog'
+
+  '"package"': 'storage.type.module.systemverilog'
+  '"endpackage"': 'storage.type.module.systemverilog'
+
+  '"interface"': 'storage.type.module.systemverilog'
+  '"endinterface"': 'storage.type.module.systemverilog'
+
+  '"specify"': 'storage.type.module.systemverilog'
+  '"endspecify"': 'storage.type.module.systemverilog'
+
+  '"property"': 'storage.type.module.systemverilog'
+  '"endproperty"': 'storage.type.module.systemverilog'
+
+  '"checker"': 'storage.type.module.systemverilog'
+  '"endchecker"': 'storage.type.module.systemverilog'
+
+  '"covergroup"': 'storage.type.module.systemverilog'
+  '"endgroup"': 'storage.type.module.systemverilog'
+
+  '"clocking"': 'storage.type.module.systemverilog'
+  '"endclocking"': 'storage.type.module.systemverilog'
+
+  '"program"': 'storage.type.module.systemverilog'
+  '"endprogram"': 'storage.type.module.systemverilog'
+
+  '"sequence"': 'storage.type.module.systemverilog'
+  '"endsequence"': 'storage.type.module.systemverilog'
+
+  '"constraint"': 'storage.type.module.systemverilog'
+
+
+  '"virtual"': 'storage.modifier'
+  '"protected"': 'storage.modifier'
+  '"pure"': 'storage.modifier'
+  '"const"': 'storage.modifier'
+  '"local"': 'storage.modifier'
+  '"global"': 'storage.modifier'
+  '"static"': 'storage.modifier'
+  '"automatic"': 'storage.modifier'
+  '"protected"': 'storage.modifier'
+  '"rand"': 'storage.modifier'
+  '"randc"': 'storage.modifier'
+  '"priority"': 'storage.modifier'
+  '"unique"': 'storage.modifier'
+  '"unique0"': 'storage.modifier'
+
+  name_of_instance: 'entity.name.type'
+
+  "'assert'": 'keyword.control'
+  "'assume'": 'keyword.control'
+  "'disable'": 'keyword.control'
+
+  "'cover'": 'keyword.control'
+  "'expect'": 'keyword.control'
+  # always_keyword: 'keyword.control'
+
+  '"always"': 'keyword.control'
+  '"always_comb"': 'keyword.control'
+  '"always_ff"': 'keyword.control'
+  '"always_latch"': 'keyword.control'
+
+  '"initial"': 'keyword.control'
+  '"final"': 'keyword.control'
+  '"assign"': 'keyword.control'
+  '"new"': 'keyword.control'
+
+  '"begin"': 'keyword.control'
+  '"end"': 'keyword.control'
+  '"import"': 'keyword.control'
+
+  '"typedef"': 'keyword.control'
+  '"extends"': 'keyword.control'
+  '"forever"': 'keyword.control'
+  '"generate"': 'keyword.control'
+  '"endgenerate"': 'keyword.control'
+  '"tagged"': 'keyword.control'
+  '"matches"': 'keyword.control'
+  '"struct"': 'keyword.control'
+
+  '"default"': 'keyword.control'
+
+  '"for"': 'keyword.control'
+  '"if"': 'keyword.control'
+  '"else"': 'keyword.control'
+  '"return"': 'keyword.control'
+  '"break"': 'keyword.control'
+  '"continue"': 'keyword.control'
+  '"repeat"': 'keyword.control'
+  '"foreach"': 'keyword.control'
+  '"while"': 'keyword.control'
+  '"do"': 'keyword.control'
+
+  '"fork"': 'keyword.control'
+  '"join"': 'keyword.control'
+  '"join_any"': 'keyword.control'
+  '"join_none"': 'keyword.control'
+  '"wait"': 'keyword.control'
+  '"wait_order"': 'keyword.control'
+  '"nettype"': 'keyword.control'
+
+  '"inside"': 'keyword.control'
+
+  case_keyword: 'keyword.control'
+  '"endcase"': 'keyword.control'
+
+  edge_identifier: 'variable'
+  '"or"': 'keyword'
+  '","': 'keyword'
+  '";"': 'keyword'
+
+  '"input"': 'variable'
+  '"output"': 'variable'
+  '"inout"': 'variable'
+
+  net_type_identifier: 'support.storage.type'
+  net_type: 'support.storage.type'
+  data_type: 'support.storage.type'
+  integer_vector_type: 'support.storage.type'
+  integer_atom_type: 'support.storage.type'
+  '"string"': 'support.storage.type'
+  non_integer_type: 'support.storage.type'
+  '"genvar"': 'support.storage.type'
+  variable_port_type: 'support.storage.type'
+  '"void"': 'support.storage.type'
+
+  hierarchical_identifier: 'keyword'
+
+  '"parameter"': 'keyword.other.systemverilog'
+  '"localparam"': 'keyword.other.systemverilog'
+  '"defparam"': 'keyword.other.systemverilog'
+  '"specparam"': 'keyword.other.systemverilog'
+
+  # number: 'number'
+  # constant_expression: 'constant'
+  # hex_number: 'number'
+  integral_number: 'constant.numeric'
+  unbased_unsized_literal: 'constant.numeric'
+  unsigned_number: 'constant.numeric'
+  # '"default"': 'number'
+
+  string_literal: 'string.quoted'
+
+  system_tf_identifier: 'entity.name.function'
+  module_identifier: 'entity.name.function'
+  function_identifier: 'entity.name.function'
+  task_identifier: 'entity.name.function'
+  # block_identifier: 'entity.name.function'
+
+# 'entity.name.type.module.systemverilog'
+
+
+
+  'preproc_arg': 'meta.preprocessor.macro'
+  simple_text_macro_usage: 'meta.preprocessor.macro'
+
+  unary_operator: 'keyword'
+  '"@"': 'keyword.opeartor'
+
+  # unary_operator: 'keyword'
+  # assignment_operator: 'tag'
+  '"="': 'keyword'
+  '"."': 'keyword'
+
+  '"?"': 'keyword'
+  '":"': 'keyword'
+
+  '"+"': 'keyword'
+  '"-"': 'keyword'
+  '"*"': 'keyword'
+  '"/"': 'keyword'
+  '"%"': 'keyword'
+  '"=="': 'keyword'
+  '"!="': 'keyword'
+  '"==="': 'keyword'
+  '"!=="': 'keyword'
+  '"==?"': 'keyword'
+  '"!=?"': 'keyword'
+  '"&&"': 'keyword'
+  '"||"': 'keyword'
+  '"**"': 'keyword'
+  '"<"': 'keyword'
+  '"<="': 'keyword'
+  '">"': 'keyword'
+  '">="': 'keyword'
+  '"&"': 'keyword'
+  '"|"': 'keyword'
+  '"^"': 'keyword'
+  '"^~"': 'keyword'
+  '"~^"': 'keyword'
+  '">>"': 'keyword'
+  '"<<"': 'keyword'
+  '">>>"': 'keyword'
+  '"<<<"': 'keyword'
+  '"->"': 'keyword'
+  '"<->"': 'keyword'
+
+  '"+:"': 'keyword'
+  '"-:"': 'keyword'
+
+  '"++"': 'keyword.opeartor'
+  '"--"': 'keyword.opeartor'
