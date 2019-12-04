@@ -12,6 +12,10 @@ Integrated Development Environment (IDE) for Electronic Design Automation (EDA) 
       - Code folding
       - Linter using [svlint](https://github.com/drom/svlint)
       - Diagnostics (errors, warnings)
+  - FIRRTL
+    * [Tree Sitter FIRRTL](https://github.com/chipsalliance/tree-sitter-firrtl)
+      - Syntax highlighting
+      - Diagnostics (errors, warnings)
 
 ### TODO
 
@@ -26,7 +30,6 @@ Integrated Development Environment (IDE) for Electronic Design Automation (EDA) 
     * Find references
     * [Verilog mode](https://www.veripool.org/wiki/verilog-mode)
   - VHDL
-  - FIRRTL
 * Waveform Panel
   - [Wavedrom Zoom](https://github.com/wavedrom/zoom)
 * Outline view
