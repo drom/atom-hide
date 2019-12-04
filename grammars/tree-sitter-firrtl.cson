@@ -1,0 +1,43 @@
+name: 'Firrtl'
+scopeName: 'source.firrtl'
+type: 'tree-sitter'
+parser: 'tree-sitter-firrtl'
+
+fileTypes: [
+  'fir'
+]
+
+scopes:
+  comment: 'comment.block'
+  id: 'constant.variable'
+  ERROR: 'invalid.illegal.underline'
+  MISSING: 'invalid.deprecated'
+
+  '"circuit"': 'keyword.control'
+  '"module"': 'keyword.control'
+
+  '"input"': 'variable'
+  '"output"': 'variable'
+
+  '"wire"': 'support.storage.type'
+  '"cmem"': 'support.storage.type'
+  '"smem"': 'support.storage.type'
+  '"reg"': 'support.storage.type'
+  '"node"': 'support.storage.type'
+
+  type: 'support.storage.type'
+  intLit: 'constant.numeric'
+
+  primop: 'entity.name.function'
+  '"mux("': 'entity.name.function'
+
+  '"reset"': 'keyword'
+  '"flip"': 'keyword'
+  '"is"': 'keyword'
+  '"invalid"': 'keyword'
+  '"with"': 'keyword'
+  '"when"': 'keyword'
+  '"skip"': 'keyword'
+
+  HexLit: 'string.quoted'
+  StringLit: 'string.quoted'
