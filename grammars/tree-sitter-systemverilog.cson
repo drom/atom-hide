@@ -156,8 +156,6 @@ scopes:
   '"unique"': 'storage.modifier'
   '"unique0"': 'storage.modifier'
 
-  name_of_instance: 'entity.name.type'
-
   "'assert'": 'keyword.control'
   "'assume'": 'keyword.control'
   "'disable'": 'keyword.control'
@@ -224,6 +222,7 @@ scopes:
   '"output"': 'variable'
   '"inout"': 'variable'
 
+  net_port_type1: 'support.storage.type'
   net_type_identifier: 'support.storage.type'
   net_type: 'support.storage.type'
   data_type: 'support.storage.type'
@@ -234,6 +233,8 @@ scopes:
   '"genvar"': 'support.storage.type'
   variable_port_type: 'support.storage.type'
   '"void"': 'support.storage.type'
+  'module_instantiation > simple_identifier': 'support.storage.type'
+
 
   hierarchical_identifier: 'keyword'
 
@@ -256,7 +257,11 @@ scopes:
   module_identifier: 'entity.name.function'
   function_identifier: 'entity.name.function'
   task_identifier: 'entity.name.function'
-  # block_identifier: 'entity.name.function'
+  checker_identifier: 'entity.name.function'
+  name_of_instance: 'entity.name.function'
+  instance_identifier: 'entity.name.function'
+  # name_of_instance: 'entity.name.type'
+    # block_identifier: 'entity.name.function'
 
 # 'entity.name.type.module.systemverilog'
 
