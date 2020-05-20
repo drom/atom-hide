@@ -32,4 +32,6 @@ Integrated Development Environment (IDE) for Electronic Design Automation (EDA) 
   - VHDL
 * Waveform Panel
   - [Wavedrom Zoom](https://github.com/wavedrom/zoom)
+* Logic Schematic Panel
+  - RTL viewer
 * Outline view
