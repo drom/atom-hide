@@ -1,0 +1,83 @@
+name: 'SystemRDL'
+scopeName: 'source.systemrdl'
+type: 'tree-sitter'
+parser: 'tree-sitter-systemrdl'
+
+injectionRegex: 'systemrdl|SystemRDL'
+
+fileTypes: [
+  'rdl'
+]
+
+folds: [
+  {
+    type: ['comment']
+  }
+]
+
+comments:
+  start: '//'
+
+scopes:
+  comment: 'comment.block'
+
+  id: 'constant.variable'
+  number: 'constant.numeric.decimal'
+  boolean_literal: 'constant.language.boolean'
+  string_literal: 'string'
+  'instance_ref_element > id': 'variable.other.object'
+
+  primary_literal: 'constant.language.boolean'
+
+  accesstype_literal: 'keyword.control'
+  onreadtype_literal: 'keyword.control'
+  onwritetype_literal: 'keyword.control'
+  addressingtype_literal: 'keyword.control'
+  precedencetype_literal: 'keyword.control'
+
+  prop_keyword: 'keyword.control'
+
+
+  # component_primary_type: 'support.storage.type'
+  component_type: 'support.storage.type'
+  simple_type: 'support.storage.type'
+  basic_data_type: 'support.storage.type'
+  data_type: 'support.storage.type'
+  property_data_type: 'support.storage.type'
+  # struct_type: 'support.storage.type'
+  'explicit_component_inst > id': 'support.storage.type'
+  'basic_data_type > id': 'support.storage.type'
+
+
+  '";"': 'punctuation.terminator.statement'
+
+  '"{"': 'punctuation.section.block.begin.bracket.curly'
+  '"}"': 'punctuation.section.block.end.bracket.curly'
+  '"("': 'punctuation.section.parens.begin.bracket.round'
+  '")"': 'punctuation.section.parens.end.bracket.round'
+
+  '"external"': 'storage.modifier'
+  '"internal"': 'storage.modifier'
+
+  '"enum"': 'keyword.control'
+  '"property"': 'keyword.control'
+  '"struct"': 'keyword.control'
+  '"abstract"': 'keyword.control'
+
+  '"default"': 'keyword.control'
+  '"encode"': 'keyword.control'
+  '"type"': 'keyword.control'
+  '"component"': 'keyword.control'
+  prop_mod: 'keyword.control'
+
+  binary_operator: 'keyword.operator'
+  unary_operator: 'keyword.operator'
+  '"->"': 'keyword.operator.member'
+  '"="': 'keyword.operator'
+  '"@"': 'keyword.operator'
+  '"+="': 'keyword.operator'
+  '"%="': 'keyword.operator'
+
+  template: 'keyword.control.directive'
+
+  'explicit_component_inst > id': 'entity.name.function'

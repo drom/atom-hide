@@ -26,8 +26,9 @@
   },
   "dependencies": {
     "svlint": "^0.2.0",
-    "tree-sitter-firrtl": "^0.3.2",
-    "tree-sitter-verilog": "^0.18.8"
+    "tree-sitter-firrtl": "^0.3.3",
+    "tree-sitter-systemrdl": "^0.4.2",
+    "tree-sitter-verilog": "^0.18.9"
   },
   "consumedServices": {
     "linter-indie": {
