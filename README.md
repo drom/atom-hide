@@ -1,6 +1,12 @@
-[![Version!](https://img.shields.io/apm/v/ide-eda.svg?style=flat-square)](https://atom.io/packages/ied-eda)
+[![Version!](https://img.shields.io/apm/v/hide.svg?style=flat-square)](https://atom.io/packages/hide)
 
-Integrated Development Environment (IDE) for Electronic Design Automation (EDA) tools
+Hardware Integrated Development Environment (hide)
+
+### Install
+
+```
+apm i hide
+```
 
 ### Features
 
@@ -14,6 +20,10 @@ Integrated Development Environment (IDE) for Electronic Design Automation (EDA) 
       - Diagnostics (errors, warnings)
   - FIRRTL
     * [Tree Sitter FIRRTL](https://github.com/chipsalliance/tree-sitter-firrtl)
+      - Syntax highlighting
+      - Diagnostics (errors, warnings)
+  - SystemRDL
+    * [Tree Sitter SystemRDL](https://github.com/SystemRDL/tree-sitter-systemrdl)
       - Syntax highlighting
       - Diagnostics (errors, warnings)
 
