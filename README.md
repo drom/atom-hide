@@ -1,3 +1,5 @@
+<p align="center"><img src="logo.svg"/></p>
+
 [![Version!](https://img.shields.io/apm/v/hide.svg?style=flat-square)](https://atom.io/packages/hide)
 
 Hardware Integrated Development Environment (hide)
