@@ -11,10 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/drom/atom-ide-eda.git"
-  },
+  "repository": "https://github.com/drom/atom-ide-eda",
   "author": "Aliaksei Chapyzhenka",
   "license": "MIT",
   "bugs": {
