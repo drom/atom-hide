@@ -11,7 +11,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "https://github.com/drom/atom-hide",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drom/atom-hide"
+  },
   "author": "Aliaksei Chapyzhenka",
   "license": "MIT",
   "bugs": {
