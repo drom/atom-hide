@@ -1,0 +1,11 @@
+{
+  "atom-workspace": {
+    "ctrl-shift-h": "hide-inspect:toggle"
+  },
+  ".wavedrom .doppler": {
+    "+": "doppler:plus",
+    "=": "doppler:plus",
+    "-": "doppler:minus",
+    "_": "doppler:minus"
+  }
+}
