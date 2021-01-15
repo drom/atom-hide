@@ -26,10 +26,14 @@ scopes:
   '"node"': 'support.storage.type'
 
   type: 'support.storage.type'
+  litType: 'support.storage.type'
+
   intLit: 'constant.numeric'
+  intStrLit: 'constant.numeric'
 
   primop: 'entity.name.function'
   '"mux("': 'entity.name.function'
+  '"validif"': 'entity.name.function'
 
   '"reset"': 'keyword'
   '"flip"': 'keyword'
@@ -39,5 +43,7 @@ scopes:
   '"when"': 'keyword'
   '"skip"': 'keyword'
 
+  BinLit: 'string.quoted'
+  OctLit: 'string.quoted'
   HexLit: 'string.quoted'
   StringLit: 'string.quoted'
