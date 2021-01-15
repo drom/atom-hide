@@ -1,0 +1,29 @@
+name: 'MLIR'
+scopeName: 'source.mlir'
+type: 'tree-sitter'
+parser: 'tree-sitter-mlir'
+
+fileTypes: [
+  'mlir'
+]
+
+comments:
+  start: '// '
+
+scopes:
+  comment: 'comment.block'
+  id: 'constant.variable'
+  ERROR: 'invalid.illegal.underline'
+  MISSING: 'invalid.deprecated'
+
+  symbolRefId: 'entity.name.function'
+  type: 'support.type'
+  valueId: 'variable'
+
+  '"func"': 'keyword.control'
+  '"module"': 'keyword.control'
+  rtlFormat: 'entity.name.class'
+
+  attributeDict: 'punctuation.definition.parameters'
+  simpleAttributeName: 'constant.other.property.js'
+  stringLiteral: 'string.quoted'
