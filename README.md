@@ -1,4 +1,4 @@
-<p align="center"><img src="logo.svg"/></p>
+<span><img align="right" src="logo.svg"/></span>
 
 [![Version!](https://img.shields.io/apm/v/hide.svg?style=flat-square)](https://atom.io/packages/hide)
 [![Linux](https://github.com/drom/atom-hide/actions/workflows/linux.yml/badge.svg)](https://github.com/drom/atom-hide/actions/workflows/linux.yml)
