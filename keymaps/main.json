@@ -2,7 +2,10 @@
   "atom-workspace": {
     "ctrl-shift-h": "hide-inspect:toggle"
   },
-  ".wavedrom .doppler": {
+  "atom-text-editor": {
+    "ctrl-shift-j": "hide-schematic:toggle"
+  },
+  ".wd-container": {
     "+": "doppler:plus",
     "=": "doppler:plus",
     "-": "doppler:minus",
