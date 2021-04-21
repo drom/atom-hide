@@ -1,6 +1,9 @@
 <p align="center"><img src="logo.svg"/></p>
 
 [![Version!](https://img.shields.io/apm/v/hide.svg?style=flat-square)](https://atom.io/packages/hide)
+[![Linux](https://github.com/drom/atom-hide/actions/workflows/linux.yml/badge.svg)](https://github.com/drom/atom-hide/actions/workflows/linux.yml)
+[![MacOS](https://github.com/drom/atom-hide/actions/workflows/macos.yml/badge.svg)](https://github.com/drom/atom-hide/actions/workflows/macos.yml)
+[![Windows](https://github.com/drom/atom-hide/actions/workflows/windows.yml/badge.svg)](https://github.com/drom/atom-hide/actions/workflows/windows.yml)
 
 Hardware Integrated Development Environment (hide)
 
