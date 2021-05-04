@@ -41,6 +41,7 @@ scopes:
   '"invalid"': 'keyword'
   '"with"': 'keyword'
   '"when"': 'keyword'
+  '"else"': 'keyword'
   '"skip"': 'keyword'
 
   BinLit: 'string.quoted'
