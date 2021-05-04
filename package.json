@@ -35,7 +35,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "svlint": "^0.2.1",
-    "tree-sitter-firrtl": "^0.6.1",
+    "tree-sitter-firrtl": "^0.7.0",
     "tree-sitter-mlir": "^0.3.0",
     "tree-sitter-systemrdl": "^0.6.1",
     "tree-sitter-verilog": "^0.20.2",
