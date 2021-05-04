@@ -1,6 +1,6 @@
 {
   "name": "hide",
-  "version": "0.7.32",
+  "version": "0.7.33",
   "description": "Hardware IDE",
   "main": "lib/main.js",
   "keywords": [
